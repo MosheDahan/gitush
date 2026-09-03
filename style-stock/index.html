@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ניהול חנות הבגדים</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ניהול חנות הבגדים</h1>
+    <nav aria-label="תפריט ראשי">
+        <ul>
+            <li><a href="index.html" aria-current="page">דף הבית</a></li>
+            <li><a href="about.html">אודות</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <form id="clothing-form">
+                <div>
+                    <label for="clothing-type">סוג הבגד</label>
+                    <select id="clothing-type" name="clothingType" required>
+                        <option value="" selected disabled>בחרו סוג בגד</option>
+                        <option value="shirt">חולצה</option>
+                        <option value="pants">מכנסיים</option>
+                        <option value="dress">שמלה</option>
+                        <option value="skirt">חצאית</option>
+                        <option value="hat">כובע</option>
+                        <option value="jacket">מעיל</option>
+                        <option value="shoes">נעליים</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="clothing-description">תיאור הבגד</label>
+                    <input id="clothing-description" name="description" type="text" required>
+                </div>
+
+                <div>
+                    <label for="clothing-color">צבע הבגד</label>
+                    <input id="clothing-color" name="color" type="color" value="#000000" required>
+                </div>
+
+                <div>
+                    <label for="clothing-price">מחיר הבגד</label>
+                    <input id="clothing-price" name="price" type="number" min="0.1" max="1000" step="0.1" required>
+                </div>
+
+                <div>
+                    <label for="clothing-discount">הנחה באחוזים</label>
+                    <input id="clothing-discount" name="discount" type="number" min="0" max="100" step="0.01" required>
+                </div>
+
+                <div>
+                    <label for="clothing-image">קישור לתמונת הבגד</label>
+                    <input id="clothing-image" name="imageUrl" type="url" pattern="https?://.+" placeholder="https://media.mango.com/is/image/punto/37085864-56-001?wid=960" required>
+                </div>
+
+                <button type="submit">הוספת בגד</button>
+        </form>
+
+        <table id="clothing-table">
+            <caption>רשימת הבגדים בחנות</caption>
+            <thead>
+                <tr>
+                    <th scope="col">סוג הבגד</th>
+                    <th scope="col">תיאור</th>
+                    <th scope="col">צבע</th>
+                    <th scope="col">מחיר</th>
+                    <th scope="col">הנחה</th>
+                    <th scope="col">תמונה</th>
+                    <th scope="col">מחיקה</th>
+                </tr>
+            </thead>
+            <tbody id="clothing-table-body"></tbody>
+        </table>
+
+        <p>מספר פריטי לבוש: <span id="clothing-count">0</span></p>
+        <p>ממוצע המחירים: <span id="average-price">0.00</span></p>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

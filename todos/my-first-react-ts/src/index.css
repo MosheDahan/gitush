@@ -1,0 +1,35 @@
+:root {
+  --ink: #18232d;
+  --muted: #71808a;
+  --paper: #f4f7f7;
+  --surface: #ffffff;
+  --line: #dce5e6;
+  --teal: #167c80;
+  --teal-soft: #e1f1ef;
+  --coral: #e77b68;
+  --shadow: 0 18px 45px rgba(31, 59, 65, 0.09);
+  --sans: 'Avenir Next', 'Trebuchet MS', sans-serif;
+  --display: Georgia, 'Times New Roman', serif;
+  font: 16px/1.5 var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100svh;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  background: radial-gradient(circle at 86% 0%, #e3f1ef 0, transparent 25rem), var(--paper);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+body { margin: 0; }
+button, a { font: inherit; }
+a { color: inherit; }
+p, h1, h2, h3 { margin: 0; }
