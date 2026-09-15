@@ -1,0 +1,11 @@
+# Dependencies and build output
+**/node_modules/
+**/dist/
+**/dist-ssr/
+
+# Local files
+.DS_Store
+*.local
+
+# Backup of the former nested gitush repository
+14-30.8.2026/gitush/.git-standalone-backup/
